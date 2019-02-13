@@ -10,6 +10,6 @@ deploy:
   provider: npm
   email: swaraj.dhumne@gmail.com
   on:
-    branch: master
+    tags: true
   api_key:
     secure: IiizKPuUDG/H6szaTK0TS/SLJStYmdS/isbdama/ry/r/XbiJXcomDrsWPkkR4REsuCMhOIafelIWPa1jWQa9J75PafVCdxR8VrfTsGvTeDKkHfYiUtXiGmiHuZ6RC8c+P6wFnzu9sxkGe/i2/guD+e4X6fBQzG/7UE0GNcGuIWtdjagNF1Om2kt/xR4iAZLlj4xaN2Yw0Cq0M4JLp41qUaHjnrNMj7Ep/QEThjc1xTnHNFAfKkkp4u2sLTn1KbiPdiBZzFV5KDLqNCqW52Fqh2LTCSOmWi86/ZF5kprt8+gQEdPshSaHGNPpB4WRDKiHMPGdKbDpoNfgAnHS3rQBOpsfE0d+t0vx5zbY8WMMPhuAqCq7wy21Fcanc7MQuDqJWUEue6y2+hmdZLreASoqYEHj5T7JbEPIPVewdsP/iJdPaXT+G1AIcfjxlrbAe6tN7oYnPsZBK/34mgTyAnCfBTxluWCPRqd2Tco5FELkv5XcSmSP4w+crHLB0om6AboOOJVKolQFvRqFYLqVbgHXPeMEYeekv28HRqhmesrK5P3bpdDGoehq32N2U/DkNBa8D8ekc/z/KSo3BftCwXL0inY93MX8RmhHSxSw8Gsn3jDFOVoPj7etfzDtp49XudY9TCx0WzAmQKJxn8HHL6p+WRjvF1LAMFIfcs/ylbMt88=
