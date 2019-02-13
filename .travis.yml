@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "11"
-script: npm install
+install: npm install
 deploy:
   provider: npm
   email: swaraj.dhumne@gmail.com
