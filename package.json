@@ -9,11 +9,11 @@
     "format": "prettier --write \"lib/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/swarajd/codebusters-ciphers#readme",
   "devDependencies": {
+    "@types/jest": "^23.0.0",
     "jest": "^23.0.0",
     "prettier": "^1.16.4",
     "ts-jest": "^23.10.5",
@@ -43,7 +44,5 @@
   "files": [
     "dist/**/*"
   ],
-  "dependencies": {
-    "@types/jest": "^23.0.0"
-  }
+  "dependencies": {}
 }
