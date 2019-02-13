@@ -1,0 +1,49 @@
+{
+  "name": "codebusters-ciphers",
+  "version": "0.0.1",
+  "description": "ciphers for science olympiad's codebusters",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/swarajd/codebusters-ciphers.git"
+  },
+  "keywords": [
+    "codebusters",
+    "cryptography",
+    "ciphers",
+    "science",
+    "olympiad"
+  ],
+  "author": "Swaraj Dhumne <swaraj.dhumne@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swarajd/codebusters-ciphers/issues"
+  },
+  "homepage": "https://github.com/swarajd/codebusters-ciphers#readme",
+  "devDependencies": {
+    "jest": "^23.0.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@types/jest": "^23.0.0"
+  }
+}
