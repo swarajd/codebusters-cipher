@@ -5,5 +5,3 @@
 export function cipher(x: string): string {
   return x;
 }
-
-
