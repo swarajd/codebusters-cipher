@@ -1,6 +1,6 @@
 {
   "name": "codebusters-ciphers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ciphers for science olympiad's codebusters",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
