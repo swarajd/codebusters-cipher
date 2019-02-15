@@ -24,9 +24,9 @@ export const letterDict: { [letter: string]: number } = letters.reduce(
  * @param letter the letter we want to shift
  * @param shift the amount we want to shift by
  */
-export const shiftLetter = (letter: string, shift: number): string => {
+export function shiftLetter(letter: string, shift: number): string {
   const idx: number = letterDict[letter.toUpperCase()];
   const newIdx: number = (idx + shift) % letters.length;
   const result = letters[newIdx];
   return result;
-};
+}
