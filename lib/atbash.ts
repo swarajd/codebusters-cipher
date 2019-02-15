@@ -1,7 +1,12 @@
 import { isLetter, letterDict, letters } from './util';
 
 /**
- * function to run atbash on a single letter
+ * function to encrypt a single letter using the atbash cipher
+ *
+ * @example
+ * // returns 'Z'
+ * atbashLetter('A')
+ *
  * @param letter letter to perform atbash on
  */
 export function atbashLetter(letter: string): string {
@@ -23,6 +28,7 @@ export function atbashLetter(letter: string): string {
  */
 export function atbash(input: string): string {
   return input
+    .toUpperCase()
     .split('')
     .map(atbashLetter)
     .join('');
