@@ -1,9 +1,7 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rules": {
-    "completed-docs": true
+    "completed-docs": true,
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"]
   }
 }
