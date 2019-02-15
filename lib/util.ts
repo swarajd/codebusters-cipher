@@ -26,6 +26,12 @@ export const letterDict: { [letter: string]: number } = letters.reduce(
  */
 export function shiftLetter(letter: string, shift: number): string {
   const idx: number = letterDict[letter.toUpperCase()];
+
+  // return the same letter if it doesn't exist in the dictionary
+  if (idx === undefined) {
+    return letter;
+  }
+
   const newIdx: number = (idx + shift) % letters.length;
   const result = letters[newIdx];
   return result;

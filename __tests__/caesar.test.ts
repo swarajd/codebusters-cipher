@@ -31,3 +31,11 @@ test('caesar with shift of 20', () => {
 
   expect(received).toEqual(expected);
 });
+
+test('caesar cipher, default shift, on a sentence', () => {
+  const testStr: string = 'THIS IS A SENTENCE';
+  const received: string = caesar(testStr);
+  const expected: string = 'GUVF VF N FRAGRAPR';
+
+  expect(received).toEqual(expected);
+});

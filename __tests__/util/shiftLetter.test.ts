@@ -107,3 +107,12 @@ test('Shift the letter "Z" by 20', () => {
 
   expect(shifted).toEqual(actualShifted);
 });
+
+test('Return same character if not a letter', () => {
+  const letter = ' ';
+  const shift = 1;
+  const shifted = shiftLetter(letter, shift);
+  const actualShifted = ' ';
+
+  expect(shifted).toEqual(actualShifted);
+});
