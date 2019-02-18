@@ -3,12 +3,13 @@
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js",
-    "jsx",
-    "json",
-    "node"
-  ]
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 95,
+      "functions": 90,
+      "lines": 95,
+      "statements": -5
+    }
+  }
 }
