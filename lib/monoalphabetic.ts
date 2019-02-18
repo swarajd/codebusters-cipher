@@ -26,9 +26,5 @@ export function validateLetterMap(letterMap: { [letter: string]: string }): bool
  * @param alphabetType the alphabet type to use when encrypting (optional)
  */
 export function monoalphabetic(input: string, map?: { [letter: string]: string }, alphabetType?: string) {
-  if (map !== undefined) {
-    throw new Error('map must be passed in for now');
-  }
-
   return input;
 }
