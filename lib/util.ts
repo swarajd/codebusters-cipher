@@ -20,6 +20,32 @@ export const letterDict: { [letter: string]: number } = letters.reduce(
 );
 
 /**
+ * a function that does n mod m
+ *
+ * @example
+ * // returns 19
+ * mod(-7, 26)
+ *
+ * @example
+ * // returns 1
+ * mod(53, 26)
+ *
+ * @example
+ * // returns 9
+ * mod(35, 26)
+ *
+ * @example
+ * // returns 11
+ * mod(11, 26)
+ *
+ * @param n the number to mod
+ * @param m the coefficient to mod by
+ */
+export function mod(n: number, m: number): number {
+  return ((n % m) + m) % m;
+}
+
+/**
  * check if a character is a letter
  * @param character character to check membership in letter set
  */
@@ -47,7 +73,7 @@ export function shiftLetter(letter: string, shift: number): string {
   const idx: number = letterDict[letter.toUpperCase()];
 
   // calculate the new index
-  const newIdx: number = (idx + shift) % letters.length;
+  const newIdx: number = mod(idx + shift, letters.length);
 
   // convert the new index to a letter
   const result = letters[newIdx];
