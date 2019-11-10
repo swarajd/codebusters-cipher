@@ -42,16 +42,16 @@
   },
   "homepage": "https://github.com/swarajd/codebusters-ciphers#readme",
   "devDependencies": {
-    "@types/jest": "^23.0.0",
+    "@types/jest": "^23.3.14",
     "husky": "^1.3.1",
-    "jest": "^23.0.0",
-    "lint-staged": "^8.1.4",
-    "prettier": "^1.16.4",
-    "pretty-quick": "^1.10.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.11.1",
     "ts-jest": "^23.10.5",
-    "tslint": "^5.12.1",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.3"
+    "typescript": "^3.7.2"
   },
   "files": [
     "dist/**/*"
