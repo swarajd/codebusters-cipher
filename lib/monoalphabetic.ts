@@ -2,7 +2,19 @@ import { isLetter, letters } from './util';
 
 /**
  * function to check if a map has no entries that map to themselves
- * @param letterMap the map used for monoalphabetic encryption
+ * @param {Object.<string, string>} letterMap the map used for monoalphabetic encryption (ex. {"a": "b", "b": "c", ...})
+ * @returns {boolean} if the passed in letterMap is valid or not
+ * @example
+ * validateLetterMap({
+ *   "a": "b",
+ *   "b": "a",
+ * }) // true
+ *
+ * @example
+ * validateLetterMap({
+ *   "a": "a",
+ *   "b": "b",
+ * }) // false
  */
 export function validateLetterMap(letterMap: { [letter: string]: string }): boolean {
   const keys: string[] = Object.keys(letterMap);
@@ -21,9 +33,16 @@ export function validateLetterMap(letterMap: { [letter: string]: string }): bool
 
 /**
  * function to encrypt a string using using the monoalphabetic cipher
- * @param input the input string to encrypt
- * @param map the map to encrypt with (optional)
- * @param alphabetType the alphabet type to use when encrypting (optional) (ex. k1, k2, random)
+ * @param {string} input the input string to encrypt (ex. "encrypt me")
+ * @param {Object.<string, string>} map the map to encrypt with (optional) (ex. {"a": "b", "b": "c", ...})
+ * @param {string} alphabetType the alphabet type to use when encrypting (optional) (ex. k1, k2, random)
+ * @returns {string} the encrypted string
+ * @example
+ * monoalphabetic("abc", {
+ *   "a": "b",
+ *   "b": "c",
+ *   "c": "a"
+ * }) // "bca"
  */
 export function monoalphabetic(input: string, map?: { [letter: string]: string }, alphabetType?: string) {
   return input;
