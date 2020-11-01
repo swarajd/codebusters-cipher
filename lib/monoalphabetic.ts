@@ -49,11 +49,12 @@ import { isLetter, letters } from './util';
 export function validateLetterMap(letterMap: { [letter: string]: string }) {
   const keys: string[] = Object.keys(letterMap);
 
-  // the map should have 26 keys
-  const lengthCond: boolean = keys.length === letters.length;
+  // the map should have 26 distinct keys
+  const distinctKeys = new Set(keys);
+  const lengthCond: boolean = distinctKeys.size === letters.length;
 
   if (!lengthCond) {
-    throw new Error(`the map does not have enough keys (has ${keys.length} keys)`);
+    throw new Error(`the map does not have enough distinct keys (has ${distinctKeys.size} distinct keys)`);
   }
 
   // each key and value should be a capitalized letter
@@ -61,7 +62,9 @@ export function validateLetterMap(letterMap: { [letter: string]: string }) {
 
   if (invalidKeyValues.length > 0) {
     const invalidKeyStr = invalidKeyValues.map(key => `${key}: ${letterMap[key]}`).join(', ');
-    throw new Error(`the map contains non-capitalized key/value pairs: {${invalidKeyStr}}`);
+    throw new Error(
+      `the map contains key/value pairs that are either not capitalized or not letters: {${invalidKeyStr}}`,
+    );
   }
 
   // each key should not map to itself
@@ -92,6 +95,6 @@ export function monoalphabetic(input: string, map: { [letter: string]: string })
   return input
     .toUpperCase()
     .split('')
-    .map(letter => map[letter])
+    .map(char => (isLetter(char) ? map[char] : char))
     .join('');
 }

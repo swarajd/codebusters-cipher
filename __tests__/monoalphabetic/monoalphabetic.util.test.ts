@@ -35,7 +35,7 @@ test('validate proper map', () => {
   }).not.toThrowError();
 });
 
-test('validate improper map (not enough keys)', () => {
+test('validate improper map (not enough distinct keys)', () => {
   const letterMap: { [letter: string]: string } = {
     A: 'B',
     B: 'C',
@@ -43,7 +43,7 @@ test('validate improper map (not enough keys)', () => {
 
   expect(() => {
     validateLetterMap(letterMap);
-  }).toThrow('the map does not have enough keys (has 2 keys)');
+  }).toThrow('the map does not have enough distinct keys (has 2 distinct keys)');
 });
 
 test('validate improper map (letters are lowercase)', () => {
@@ -78,7 +78,7 @@ test('validate improper map (letters are lowercase)', () => {
 
   expect(() => {
     validateLetterMap(letterMap);
-  }).toThrow('the map contains non-capitalized key/value pairs: {a: a, b: c}');
+  }).toThrow('the map contains key/value pairs that are either not capitalized or not letters: {a: a, b: c}');
 });
 
 test('validate improper map (letter maps to self)', () => {
