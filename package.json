@@ -1,5 +1,5 @@
 {
-  "name": "codebusters-ciphers",
+  "name": "@swarajd/codebusters-ciphers",
   "version": "0.0.4",
   "description": "ciphers for science olympiad's codebusters",
   "main": "dist/index.js",
@@ -58,5 +58,8 @@
   "files": [
     "dist/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
 }
