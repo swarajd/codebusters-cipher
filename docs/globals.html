@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html class="default no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>codebusters-ciphers</title>
+    <meta name="description" content="Documentation for codebusters-ciphers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="tsd-page-toolbar">
+        <div class="container">
+          <div class="table-wrap">
+            <div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+              <div class="field">
+                <label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+                <input id="tsd-search-field" type="text" />
+              </div>
+              <ul class="results">
+                <li class="state loading">Preparing search index...</li>
+                <li class="state failure">The search index is not available</li>
+              </ul>
+              <a href="index.html" class="title">codebusters-ciphers</a>
+            </div>
+            <div class="table-cell" id="tsd-widgets">
+              <div id="tsd-filter">
+                <a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+                <div class="tsd-filter-group">
+                  <div class="tsd-select" id="tsd-filter-visibility">
+                    <span class="tsd-select-label">All</span>
+                    <ul class="tsd-select-list">
+                      <li data-value="public">Public</li>
+                      <li data-value="protected">Public/Protected</li>
+                      <li data-value="private" class="selected">All</li>
+                    </ul>
+                  </div>
+                  <input type="checkbox" id="tsd-filter-inherited" checked />
+                  <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                  <input type="checkbox" id="tsd-filter-externals" checked />
+                  <label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+                  <input type="checkbox" id="tsd-filter-only-exported" />
+                  <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                </div>
+              </div>
+              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tsd-page-title">
+        <div class="container">
+          <ul class="tsd-breadcrumb">
+            <li>
+              <a href="globals.html">Globals</a>
+            </li>
+          </ul>
+          <h1>codebusters-ciphers</h1>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="row">
+        <div class="col-8 col-content">
+          <section class="tsd-panel-group tsd-index-group">
+            <h2>Index</h2>
+            <section class="tsd-panel tsd-index-panel">
+              <div class="tsd-index-content">
+                <section class="tsd-index-section ">
+                  <h3>Variables</h3>
+                  <ul class="tsd-index-list">
+                    <li class="tsd-kind-variable">
+                      <a href="globals.html#letterdict" class="tsd-kind-icon">letter<wbr />Dict</a>
+                    </li>
+                    <li class="tsd-kind-variable">
+                      <a href="globals.html#letterset" class="tsd-kind-icon">letter<wbr />Set</a>
+                    </li>
+                    <li class="tsd-kind-variable"><a href="globals.html#letters" class="tsd-kind-icon">letters</a></li>
+                  </ul>
+                </section>
+                <section class="tsd-index-section ">
+                  <h3>Functions</h3>
+                  <ul class="tsd-index-list">
+                    <li class="tsd-kind-function"><a href="globals.html#atbash" class="tsd-kind-icon">atbash</a></li>
+                    <li class="tsd-kind-function">
+                      <a href="globals.html#atbashletter" class="tsd-kind-icon">atbash<wbr />Letter</a>
+                    </li>
+                    <li class="tsd-kind-function"><a href="globals.html#caesar" class="tsd-kind-icon">caesar</a></li>
+                    <li class="tsd-kind-function">
+                      <a href="globals.html#isletter" class="tsd-kind-icon">is<wbr />Letter</a>
+                    </li>
+                    <li class="tsd-kind-function"><a href="globals.html#mod" class="tsd-kind-icon">mod</a></li>
+                    <li class="tsd-kind-function">
+                      <a href="globals.html#monoalphabetic" class="tsd-kind-icon">monoalphabetic</a>
+                    </li>
+                    <li class="tsd-kind-function">
+                      <a href="globals.html#shiftletter" class="tsd-kind-icon">shift<wbr />Letter</a>
+                    </li>
+                    <li class="tsd-kind-function">
+                      <a href="globals.html#validatelettermap" class="tsd-kind-icon">validate<wbr />Letter<wbr />Map</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          <section class="tsd-panel-group tsd-member-group ">
+            <h2>Variables</h2>
+            <section class="tsd-panel tsd-member tsd-kind-variable">
+              <a name="letterdict" class="tsd-anchor"></a>
+              <h3><span class="tsd-flag ts-flagConst">Const</span> letter<wbr />Dict</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                letter<wbr />Dict<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span
+                ><span class="tsd-signature-symbol">
+                  = letters.reduce((letterMap: { [letter: string]: number }, letter: string): { [letter: string]: number
+                  } &#x3D;&gt; {letterMap[letter] &#x3D; letter.charCodeAt(0) - 65;return letterMap;},{},)</span
+                >
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L14">util.ts:14</a>
+                  </li>
+                </ul>
+              </aside>
+              <div class="tsd-comment tsd-typography">
+                <div class="lead">
+                  <p>mapping of capitalized letters to indices (A -&gt; 0, B -&gt; 1, ...)</p>
+                </div>
+              </div>
+              <div class="tsd-type-declaration">
+                <h4>Type declaration</h4>
+                <ul class="tsd-parameters">
+                  <li class="tsd-parameter-index-signature">
+                    <h5>
+                      <span class="tsd-signature-symbol">[</span>letter: <span class="tsd-signature-type">string</span
+                      ><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span>
+                    </h5>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-variable">
+              <a name="letterset" class="tsd-anchor"></a>
+              <h3><span class="tsd-flag ts-flagConst">Const</span> letter<wbr />Set</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                letter<wbr />Set<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span
+                ><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><span class="tsd-signature-symbol"> = new Set(letters)</span>
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L9">util.ts:9</a>
+                  </li>
+                </ul>
+              </aside>
+              <div class="tsd-comment tsd-typography">
+                <div class="lead">
+                  <p>set of capitalized letters</p>
+                </div>
+              </div>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-variable">
+              <a name="letters" class="tsd-anchor"></a>
+              <h3><span class="tsd-flag ts-flagConst">Const</span> letters</h3>
+              <div class="tsd-signature tsd-kind-icon">
+                letters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">[]</span
+                ><span class="tsd-signature-symbol">
+                  = Array.from({ length: 26 }, (_, i) &#x3D;&gt; String.fromCharCode(i + 65))</span
+                >
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L4">util.ts:4</a>
+                  </li>
+                </ul>
+              </aside>
+              <div class="tsd-comment tsd-typography">
+                <div class="lead">
+                  <p>list of capitalized letters</p>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section class="tsd-panel-group tsd-member-group ">
+            <h2>Functions</h2>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="atbash" class="tsd-anchor"></a>
+              <h3>atbash</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  atbash<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/atbash.ts#L31"
+                          >atbash.ts:31</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>function to encrypt a string using the atbash cipher</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">atbash(<span class="hljs-string">&#x27;THIS IS A WORD&#x27;</span>) <span class="hljs-comment">// returns &#x27;GSRH RH Z DLIW&#x27;</span></code></pre>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>input: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the input string to encrypt</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="atbashletter" class="tsd-anchor"></a>
+              <h3>atbash<wbr />Letter</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  atbash<wbr />Letter<span class="tsd-signature-symbol">(</span>letter<span class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/atbash.ts#L13"
+                          >atbash.ts:13</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>function to encrypt a single letter using the atbash cipher</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">atbashLetter(<span class="hljs-string">&#x27;A&#x27;</span>) <span class="hljs-comment">// returns &#x27;Z&#x27;</span></code></pre>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>letter: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>letter to perform atbash on</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="caesar" class="tsd-anchor"></a>
+              <h3>caesar</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  caesar<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span>, shift<span class="tsd-signature-symbol">?: </span
+                  ><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/caesar.ts#L19"
+                          >caesar.ts:19</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>function to encrypt a string with the caesar cipher (with optional shift)</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">caesar(<span class="hljs-string">&#x27;ABC&#x27;</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// returns &#x27;BCD&#x27;</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">caesar(<span class="hljs-string">&#x27;ABC&#x27;</span>) <span class="hljs-comment">// returns &#x27;NOP&#x27;</span></code></pre>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>input: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the input string to encrypt</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value">Default value</span> shift:
+                        <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 13</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the number to shift each letter by</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="isletter" class="tsd-anchor"></a>
+              <h3>is<wbr />Letter</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  is<wbr />Letter<span class="tsd-signature-symbol">(</span>character<span class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L56"
+                          >util.ts:56</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>check if a character is a letter</p>
+                    </div>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>character: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>character to check membership in letter set</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="mod" class="tsd-anchor"></a>
+              <h3>mod</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  mod<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">number</span>, m<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L48"
+                          >util.ts:48</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>a function that does n mod m</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">mod(-<span class="hljs-number">7</span>, <span class="hljs-number">26</span>) <span class="hljs-comment">// returns 19</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">mod(<span class="hljs-number">53</span>, <span class="hljs-number">26</span>) <span class="hljs-comment">// returns 1</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">mod(<span class="hljs-number">35</span>, <span class="hljs-number">26</span>) <span class="hljs-comment">// returns 9</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">mod(<span class="hljs-number">11</span>, <span class="hljs-number">26</span>) <span class="hljs-comment">// returns 11</span></code></pre>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>n: <span class="tsd-signature-type">number</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the number to mod</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>m: <span class="tsd-signature-type">number</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the coefficient to mod by</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="monoalphabetic" class="tsd-anchor"></a>
+              <h3>monoalphabetic</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  monoalphabetic<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span>, map<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/monoalphabetic.ts#L89"
+                          >monoalphabetic.ts:89</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>function to encrypt a string using using the monoalphabetic cipher</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd>
+                        <p>
+                          monoalphabetic(&quot;abc&quot;, { &quot;a&quot;: &quot;b&quot;, &quot;b&quot;: &quot;c&quot;,
+                          &quot;c&quot;: &quot;a&quot; }) // &quot;bca&quot;
+                        </p>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>input: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the input string to encrypt (ex. &quot;encrypt me&quot;)</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>map: <span class="tsd-signature-symbol">{}</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          the map to encrypt with (ex. {&quot;a&quot;: &quot;b&quot;, &quot;b&quot;: &quot;c&quot;,
+                          ...})
+                        </p>
+                      </div>
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter-index-signature">
+                          <h5>
+                            <span class="tsd-signature-symbol">[</span>letter:
+                            <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+                  <p>the encrypted string</p>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="shiftletter" class="tsd-anchor"></a>
+              <h3>shift<wbr />Letter</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  shift<wbr />Letter<span class="tsd-signature-symbol">(</span>letter<span class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-type">string</span>, shift<span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/util.ts#L69"
+                          >util.ts:69</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>utility to shift a capitalized letter by a certain amount</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>example</dt>
+                      <dd><p>shiftLetter(&#39;A&#39;, 3) // returns &#39;D&#39;</p></dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>letter: <span class="tsd-signature-type">string</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the letter we want to shift</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>shift: <span class="tsd-signature-type">number</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>the amount we want to shift by</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+                </li>
+              </ul>
+            </section>
+            <section class="tsd-panel tsd-member tsd-kind-function">
+              <a name="validatelettermap" class="tsd-anchor"></a>
+              <h3>validate<wbr />Letter<wbr />Map</h3>
+              <ul class="tsd-signatures tsd-kind-function">
+                <li class="tsd-signature tsd-kind-icon">
+                  validate<wbr />Letter<wbr />Map<span class="tsd-signature-symbol">(</span>letterMap<span
+                    class="tsd-signature-symbol"
+                    >: </span
+                  ><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a href="https://github.com/swarajd/codebusters-ciphers/blob/1b56a9c/lib/monoalphabetic.ts#L50"
+                          >monoalphabetic.ts:50</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>function to check if a map has no entries that map to themselves</p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>throws</dt>
+                      <dd><p>Will throw an error if the passed in letterMap is not valid</p></dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">validateLetterMap({
+  <span class="hljs-string">&quot;A&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>,
+  <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>,
+  ...
+  <span class="hljs-string">&quot;Y&quot;</span>: <span class="hljs-string">&quot;Z&quot;</span>,
+  <span class="hljs-string">&quot;Z&quot;</span>: <span class="hljs-string">&quot;Y&quot;</span>,
+}) <span class="hljs-comment">// returns nothing</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">validateLetterMap({
+  <span class="hljs-string">&quot;A&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>,
+  <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>,
+}) <span class="hljs-comment">// throws &#x27;the map does not have enough keys (has 2 keys)&#x27;</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">validateLetterMap({
+  <span class="hljs-string">&quot;a&quot;</span>: <span class="hljs-string">&quot;b&quot;</span>,
+  <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-string">&quot;C&quot;</span>,
+  ...
+  <span class="hljs-string">&quot;Y&quot;</span>: <span class="hljs-string">&quot;Z&quot;</span>,
+  <span class="hljs-string">&quot;Z&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>
+}) <span class="hljs-comment">// throws &#x27;the map contains non-capitalized key/value pairs: {a: b}&#x27;</span></code></pre>
+                      </dd>
+                      <dt>example</dt>
+                      <dd>
+                        <pre><code class="language-js">validateLetterMap({
+  <span class="hljs-string">&quot;A&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>,
+  <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-string">&quot;C&quot;</span>,
+  ...
+  <span class="hljs-string">&quot;Y&quot;</span>: <span class="hljs-string">&quot;Z&quot;</span>,
+  <span class="hljs-string">&quot;Z&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>
+}) <span class="hljs-comment">// throws &#x27;the map contains keys that map to themselves: {A: A}&#x27;</span></code></pre>
+                      </dd>
+                    </dl>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>letterMap: <span class="tsd-signature-symbol">{}</span></h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          the map used for monoalphabetic encryption (ex. {&quot;a&quot;: &quot;b&quot;, &quot;b&quot;:
+                          &quot;c&quot;, ...})
+                        </p>
+                      </div>
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter-index-signature">
+                          <h5>
+                            <span class="tsd-signature-symbol">[</span>letter:
+                            <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+                </li>
+              </ul>
+            </section>
+          </section>
+        </div>
+        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+          <nav class="tsd-navigation primary">
+            <ul>
+              <li class="globals current ">
+                <a href="globals.html"><em>Globals</em></a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="tsd-navigation secondary menu-sticky">
+            <ul class="before-current">
+              <li class=" tsd-kind-variable">
+                <a href="globals.html#letterdict" class="tsd-kind-icon">letter<wbr />Dict</a>
+              </li>
+              <li class=" tsd-kind-variable">
+                <a href="globals.html#letterset" class="tsd-kind-icon">letter<wbr />Set</a>
+              </li>
+              <li class=" tsd-kind-variable">
+                <a href="globals.html#letters" class="tsd-kind-icon">letters</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#atbash" class="tsd-kind-icon">atbash</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#atbashletter" class="tsd-kind-icon">atbash<wbr />Letter</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#caesar" class="tsd-kind-icon">caesar</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#isletter" class="tsd-kind-icon">is<wbr />Letter</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#mod" class="tsd-kind-icon">mod</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#monoalphabetic" class="tsd-kind-icon">monoalphabetic</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#shiftletter" class="tsd-kind-icon">shift<wbr />Letter</a>
+              </li>
+              <li class=" tsd-kind-function">
+                <a href="globals.html#validatelettermap" class="tsd-kind-icon">validate<wbr />Letter<wbr />Map</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <footer class="with-border-bottom">
+      <div class="container">
+        <h2>Legend</h2>
+        <div class="tsd-legend-group"></div>
+      </div>
+    </footer>
+    <div class="container tsd-generator">
+      <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+    </div>
+    <div class="overlay"></div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

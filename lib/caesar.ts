@@ -4,12 +4,14 @@ import { shiftLetter } from './util';
  * function to encrypt a string with the caesar cipher (with optional shift)
  *
  * @example
- * // returns 'BCD'
- * caesar('ABC', 1)
+ * ```js
+ * caesar('ABC', 1) // returns 'BCD'
+ * ```
  *
  * @example
- * // returns 'NOP'
- * caesar('ABC')
+ * ```js
+ * caesar('ABC') // returns 'NOP'
+ * ```
  *
  * @param input the input string to encrypt
  * @param shift the number to shift each letter by

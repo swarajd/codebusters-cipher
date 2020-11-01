@@ -23,20 +23,24 @@ export const letterDict: { [letter: string]: number } = letters.reduce(
  * a function that does n mod m
  *
  * @example
- * // returns 19
- * mod(-7, 26)
+ * ```js
+ * mod(-7, 26) // returns 19
+ * ```
  *
  * @example
- * // returns 1
- * mod(53, 26)
+ * ```js
+ * mod(53, 26) // returns 1
+ * ```
  *
  * @example
- * // returns 9
- * mod(35, 26)
+ * ```js
+ * mod(35, 26) // returns 9
+ * ```
  *
  * @example
- * // returns 11
- * mod(11, 26)
+ * ```js
+ * mod(11, 26) // returns 11
+ * ```
  *
  * @param n the number to mod
  * @param m the coefficient to mod by
@@ -57,8 +61,7 @@ export function isLetter(character: string) {
  * utility to shift a capitalized letter by a certain amount
  *
  * @example
- * // returns 'D'
- * shiftLetter('A', 3)
+ * shiftLetter('A', 3) // returns 'D'
  *
  * @param letter the letter we want to shift
  * @param shift the amount we want to shift by

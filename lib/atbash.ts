@@ -4,8 +4,9 @@ import { isLetter, letterDict, letters } from './util';
  * function to encrypt a single letter using the atbash cipher
  *
  * @example
- * // returns 'Z'
- * atbashLetter('A')
+ * ```js
+ * atbashLetter('A') // returns 'Z'
+ * ```
  *
  * @param letter letter to perform atbash on
  */
@@ -21,8 +22,9 @@ export function atbashLetter(letter: string): string {
  * function to encrypt a string using the atbash cipher
  *
  * @example
- * // returns 'GSRH RH Z DLIW'
- * atbash('THIS IS A WORD')
+ * ```js
+ * atbash('THIS IS A WORD') // returns 'GSRH RH Z DLIW'
+ * ```
  *
  * @param input the input string to encrypt
  */

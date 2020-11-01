@@ -3,18 +3,48 @@ import { isLetter, letters } from './util';
 /**
  * function to check if a map has no entries that map to themselves
  * @param {Object.<string, string>} letterMap the map used for monoalphabetic encryption (ex. {"a": "b", "b": "c", ...})
- * @returns {boolean} if the passed in letterMap is valid or not
+ * @throws  Will throw an error if the passed in letterMap is not valid
  * @example
+ * ```js
  * validateLetterMap({
- *   "a": "b",
- *   "b": "a",
- * }) // true
+ *   "A": "B",
+ *   "B": "A",
+ *   ...
+ *   "Y": "Z",
+ *   "Z": "Y",
+ * }) // returns nothing
+ * ```
  *
  * @example
+ * ```js
  * validateLetterMap({
- *   "a": "a",
- *   "b": "b",
- * }) // false
+ *   "A": "B",
+ *   "B": "A",
+ * }) // throws 'the map does not have enough keys (has 2 keys)'
+ * ```
+ *
+ * @example
+ * ```js
+ * validateLetterMap({
+ *   "a": "b",
+ *   "B": "C",
+ *   ...
+ *   "Y": "Z",
+ *   "Z": "A"
+ * }) // throws 'the map contains non-capitalized key/value pairs: {a: b}'
+ * ```
+ *
+ * @example
+ * ```js
+ * validateLetterMap({
+ *   "A": "A",
+ *   "B": "C",
+ *   ...
+ *   "Y": "Z",
+ *   "Z": "B"
+ * }) // throws 'the map contains keys that map to themselves: {A: A}'
+ * ```
+ *
  */
 export function validateLetterMap(letterMap: { [letter: string]: string }) {
   const keys: string[] = Object.keys(letterMap);
