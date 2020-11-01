@@ -2,7 +2,7 @@ import { isLetter, letters } from './util';
 
 /**
  * function to check if a map has no entries that map to themselves
- * @param {Object.<string, string>} letterMap the map used for monoalphabetic encryption (ex. {"a": "b", "b": "c", ...})
+ * @param {Object.<string, string>} letterMap the map used for monoalphabetic encryption (ex. {"A": "B", "B": "C", ...})
  * @throws  Will throw an error if the passed in letterMap is not valid
  * @example
  * ```js
