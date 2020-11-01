@@ -16,26 +16,37 @@ import { isLetter, letters } from './util';
  *   "b": "b",
  * }) // false
  */
-export function validateLetterMap(letterMap: { [letter: string]: string }): boolean {
+export function validateLetterMap(letterMap: { [letter: string]: string }) {
   const keys: string[] = Object.keys(letterMap);
 
   // the map should have 26 keys
   const lengthCond: boolean = keys.length === letters.length;
 
+  if (!lengthCond) {
+    throw new Error(`the map does not have enough keys (has ${keys.length} keys)`);
+  }
+
   // each key and value should be a capitalized letter
-  const letterCond: boolean = keys.map(k => isLetter(k) && isLetter(letterMap[k])).every(x => x);
+  let invalidKeyValues = keys.filter(key => !(isLetter(key) && isLetter(letterMap[key])));
+
+  if (invalidKeyValues.length > 0) {
+    const invalidKeyStr = invalidKeyValues.map(key => `${key}: ${letterMap[key]}`).join(', ');
+    throw new Error(`the map contains non-capitalized key/value pairs: {${invalidKeyStr}}`);
+  }
 
   // each key should not map to itself
-  const uniqueCond: boolean = !keys.map(k => k === letterMap[k]).some(x => x);
+  invalidKeyValues = keys.filter(key => key === letterMap[key]);
 
-  return lengthCond && letterCond && uniqueCond;
+  if (invalidKeyValues.length > 0) {
+    const invalidKeyStr = invalidKeyValues.map(key => `${key}: ${letterMap[key]}`).join(', ');
+    throw new Error(`the map contains keys that map to themselves: {${invalidKeyStr}}`);
+  }
 }
 
 /**
  * function to encrypt a string using using the monoalphabetic cipher
  * @param {string} input the input string to encrypt (ex. "encrypt me")
- * @param {Object.<string, string>} map the map to encrypt with (optional) (ex. {"a": "b", "b": "c", ...})
- * @param {string} alphabetType the alphabet type to use when encrypting (optional) (ex. k1, k2, random)
+ * @param {Object.<string, string>} map the map to encrypt with (ex. {"a": "b", "b": "c", ...})
  * @returns {string} the encrypted string
  * @example
  * monoalphabetic("abc", {
@@ -44,6 +55,13 @@ export function validateLetterMap(letterMap: { [letter: string]: string }): bool
  *   "c": "a"
  * }) // "bca"
  */
-export function monoalphabetic(input: string, map?: { [letter: string]: string }, alphabetType?: string) {
-  return input;
+export function monoalphabetic(input: string, map: { [letter: string]: string }) {
+  // validate the map to make sure we're encrypting with a proper map
+  validateLetterMap(map);
+
+  return input
+    .toUpperCase()
+    .split('')
+    .map(letter => map[letter])
+    .join('');
 }
