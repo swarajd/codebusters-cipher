@@ -3,9 +3,21 @@
 - [x] atbash
 - [x] caesar
 - [x] monoalphabetic
+- [ ] affine
+- [ ] vigenere
+- [ ] baconian
+- [ ] hill
+- [ ] pollux
+- [ ] morbit
 
 ## tests
 
-- [ ] atbash
-- [ ] caesar
+- [x] atbash
+- [x] caesar
 - [x] monoalphabetic
+- [ ] affine
+- [ ] vigenere
+- [ ] baconian
+- [ ] hill
+- [ ] pollux
+- [ ] morbit
