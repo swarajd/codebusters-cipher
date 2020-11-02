@@ -57,6 +57,6 @@
     "access": "public"
   },
   "lint-staged": {
-    "*.ts": ["tslint", "prettier --write"]
+    "*.ts": ["npm run lint", "prettier --write"]
   }
 }
