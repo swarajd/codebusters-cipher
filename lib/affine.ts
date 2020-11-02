@@ -1,4 +1,4 @@
-import { isLetter, letters, letterDict } from './util';
+import { isLetter, letterDict, letters } from './util';
 
 /**
  * Find the modulus of a number given a certain base

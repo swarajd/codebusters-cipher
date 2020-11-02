@@ -3,7 +3,7 @@
 - [x] atbash
 - [x] caesar
 - [x] monoalphabetic
-- [ ] affine
+- [x] affine
 - [ ] vigenere
 - [ ] baconian
 - [ ] hill
@@ -15,7 +15,7 @@
 - [x] atbash
 - [x] caesar
 - [x] monoalphabetic
-- [ ] affine
+- [x] affine
 - [ ] vigenere
 - [ ] baconian
 - [ ] hill
